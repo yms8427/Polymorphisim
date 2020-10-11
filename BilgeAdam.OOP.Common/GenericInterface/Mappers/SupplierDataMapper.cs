@@ -5,13 +5,12 @@ using System.Collections.Generic;
 
 namespace BilgeAdam.OOP.Common.GenericInterface.Mappers
 {
-    internal class ProductDataMapper : IDataMapper<Product>
+    internal class SupplierDataMapper : IDataMapper<Supplier>
     {
-        public List<Product> ReadAll()
+        public List<Supplier> ReadAll()
         {
-            var json = FileManager.Read<Product>();
-            var products = JsonConvert.DeserializeObject<List<Product>>(json);
-            return products;
+            var json = FileManager.Read<Supplier>();
+            return JsonConvert.DeserializeObject<List<Supplier>>(json);
         }
     }
 }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BilgeAdam.OOP.Common.GenericInterface
 {
-    interface IDataMapper<T> where T: IEntity
+    public interface IDataMapper<T> where T: IEntity
     {
-        List<T> ReadAll(string rawData);
+        List<T> ReadAll();
     }
 }

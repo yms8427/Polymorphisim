@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,7 +46,11 @@
   <ItemGroup>
     <Compile Include="AbstractMethod\Circle.cs" />
     <Compile Include="GenericInterface\IDataMapper.cs" />
+    <Compile Include="GenericInterface\Managers\FileManager.cs" />
+    <Compile Include="GenericInterface\MapperFactory.cs" />
+    <Compile Include="GenericInterface\Mappers\CategoryDataMapper.cs" />
     <Compile Include="GenericInterface\Mappers\ProductDataMapper.cs" />
+    <Compile Include="GenericInterface\Mappers\SupplierDataMapper.cs" />
     <Compile Include="GenericInterface\Models\Category.cs" />
     <Compile Include="GenericInterface\IEntity.cs" />
     <Compile Include="GenericInterface\Models\Product.cs" />
@@ -56,6 +63,8 @@
     <Compile Include="VirtualMethods\BusinessPartner.cs" />
     <Compile Include="VirtualMethods\BusinessPartnerAbstractions.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
